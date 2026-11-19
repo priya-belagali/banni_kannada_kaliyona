@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಬನ್ನಿ ಕನ್ನಡ ಕಲಿಯೋಣ | Banni Kannada Kaliyona — Hema Belagali</title>
+    <!-- Friendly, Student-Centered Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Fredoka"', '"Noto Sans Kannada"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', '"Noto Sans Kannada"', 'sans-serif'],
+                        kannada: ['"Noto Sans Kannada"', 'sans-serif'],
+                    },
+                    colors: {
+                        ivory: '#FDFBF7',
+                        mint: '#E6F4F1',
+                        peacock: {
+                            50: '#E6F4F1',
+                            100: '#CBE8E2',
+                            600: '#16758A',
+                            700: '#0F5C6E',
+                            800: '#0B4654',
+                            900: '#07313B',
+                        },
+                        marigold: {
+                            50: '#FEF9EC',
+                            100: '#FEF0D2',
+                            400: '#F7B749',
+                            500: '#F4A226',
+                            600: '#D48411',
+                        },
+                        coral: {
+                            50: '#FDF1EF',
+                            100: '#FBE0DC',
+                            500: '#E05A47',
+                            600: '#C94432',
+                        },
+                        plum: {
+                            50: '#F5F0FF',
+                            600: '#6D4AFF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #1E293B;
+        }
+        /* Organic playful shapes */
+        .blob-shape-1 {
+            border-radius: 58% 42% 48% 52% / 46% 54% 46% 54%;
+        }
+        .blob-shape-2 {
+            border-radius: 42% 58% 62% 38% / 53% 41% 59% 47%;
+        }
+        /* 3D Flip Card for Numbers */
+        .flip-card {
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-front, .flip-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flip-back {
+            transform: rotateY(180deg);
+        }
+        /* Soft notebook dot pattern */
+        .notebook-dots {
+            background-image: radial-gradient(#CBD5E1 1.2px, transparent 1.2px);
+            background-size: 22px 22px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-marigold-400 selection:text-peacock-900 overflow-x-hidden">
+
+    <!-- Top Contact Strip -->
+    <div class="bg-peacock-900 text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="font-kannada bg-marigold-500 text-peacock-900 font-bold px-2 py-0.5 rounded-full text-xs">ನಮಸ್ಕಾರ!</span>
+                <span class="text-peacock-100">Kannada Basics & School Syllabus (CBSE • ICSE • State Board)</span>
+            </div>
+            <div class="flex items-center gap-4 font-semibold">
+                <a href="tel:+919480407099" class="inline-flex items-center gap-1.5 text-marigold-400 hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>94804 07099</span>
+                </a>
+                <a href="https://wa.me/919480407099?text=Namaskara%20Hema%20Ma'am,%20I%20would%20like%20to%20enquire%20about%20Kannada%20classes%20for%20students." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-emerald-300 hover:text-emerald-200 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-ivory/95 backdrop-blur-md border-b border-peacock-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 min-w-0">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-peacock-700 to-peacock-900 text-marigold-400 flex items-center justify-center shadow-md shadow-peacock-700/20 rotate-[-3deg] shrink-0">
+                    <span class="font-kannada text-2xl font-bold leading-none">ಕ</span>
+                </div>
+                <div class="min-w-0">
+                    <div class="font-display font-bold text-sm sm:text-lg leading-[1.45] flex flex-wrap items-center gap-x-2">
+                        <span class="font-kannada bg-gradient-to-r from-coral-600 via-marigold-500 to-peacock-700 bg-clip-text text-transparent">ಬನ್ನಿ ಕನ್ನಡ ಕಲಿಯೋಣ</span>
+                        <span class="text-peacock-900">| Banni Kannada Kaliyona</span>
+                    </div>
+                    <div class="text-[11px] sm:text-xs font-semibold text-coral-500 font-kannada leading-relaxed">ಪ್ರಾರಂಭಿಕ ಕನ್ನಡ ಮತ್ತು ಶಾಲಾ ಪಠ್ಯ • Hema Belagali</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700 shrink-0">
+                <a href="#syllabus-focus" class="hover:text-peacock-700 transition-colors">About</a>
+                <a href="#batch-timings" class="hover:text-peacock-700 transition-colors">Batches</a>
+                <a href="#study-corner" class="hover:text-peacock-700 transition-colors">Study Corner</a>
+                <a href="#classroom-moments" class="hover:text-peacock-700 transition-colors">Photos</a>
+                <a href="#student-reviews" class="hover:text-peacock-700 transition-colors">Student Reviews</a>
+            </nav>
+
+            <!-- Call CTA & Mobile Button -->
+            <div class="flex items-center gap-2.5">
+                <a href="tel:+919480407099" class="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transition-all">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>94804 07099</span>
+                </a>
+                <button onclick="toggleMobileNav()" aria-label="Open Navigation" class="md:hidden p-2.5 rounded-xl bg-peacock-50 text-peacock-800">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-peacock-100 px-4 py-3 space-y-1.5 text-sm font-semibold">
+            <a href="#syllabus-focus" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl hover:bg-peacock-50 text-peacock-900">About</a>
+            <a href="#batch-timings" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl hover:bg-peacock-50 text-peacock-900">Batches (8 Batches)</a>
+            <a href="#study-corner" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl hover:bg-peacock-50 text-peacock-900">Study Corner</a>
+            <a href="#classroom-moments" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl hover:bg-peacock-50 text-peacock-900">Photos</a>
+            <a href="#student-reviews" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl hover:bg-peacock-50 text-peacock-900">Student Reviews</a>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- VIBRANT STUDENT-FOCUSED HERO SECTION                                  -->
+    <!-- ===================================================================== -->
+    <section class="relative overflow-hidden notebook-dots pt-10 pb-16 sm:pt-14 sm:pb-20">
+        <!-- Decorative Background Blobs & Kannada Watermark Letters -->
+        <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 w-72 h-72 bg-marigold-100/80 blob-shape-1 blur-2xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute top-24 -right-20 w-80 h-80 bg-peacock-100/70 blob-shape-2 blur-2xl"></div>
+        <div aria-hidden="true" class="pointer-events-none select-none hidden lg:block absolute top-10 right-[42%] font-kannada text-7xl font-bold text-marigold-500/15 rotate-12">ಅ ಆ</div>
+        <div aria-hidden="true" class="pointer-events-none select-none hidden lg:block absolute bottom-14 left-12 font-kannada text-6xl font-bold text-peacock-700/10 -rotate-12">ಕ ಖ ಗ</div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Left Column: Polished Introduction -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="inline-flex flex-wrap items-center gap-2 bg-marigold-100 border border-marigold-400/50 text-peacock-900 px-3.5 py-1.5 rounded-full text-xs font-bold">
+                        <span class="w-2 h-2 rounded-full bg-coral-500"></span>
+                        <span>Online Kannada Classes • Grades 1–10 • Bangalore</span>
+                    </div>
+
+                    <!-- Colourful Bilingual Tutorial Title -->
+                    <div class="space-y-2 pt-1">
+                        <h1 class="font-kannada text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.55] pt-2 pb-1 bg-gradient-to-r from-coral-600 via-marigold-500 to-peacock-700 bg-clip-text text-transparent">
+                            ಬನ್ನಿ ಕನ್ನಡ ಕಲಿಯೋಣ
+                        </h1>
+                        <div class="font-display text-2xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.25]">
+                            <span class="text-peacock-900">Banni </span>
+                            <span class="text-coral-500">Kannada </span>
+                            <span class="text-marigold-500 underline decoration-peacock-700 decoration-4 underline-offset-4">Kaliyona</span>
+                        </div>
+                        <p class="font-display text-base sm:text-lg font-semibold text-peacock-700 leading-relaxed pt-1">
+                            ಪ್ರಾರಂಭಿಕ ಕನ್ನಡ (Kannada Basics), Grammar &amp; School Syllabus Online
+                        </p>
+                    </div>
+
+                    <!-- Polished, Concise Introduction -->
+                    <div class="bg-white/90 border-2 border-peacock-100 rounded-3xl p-5 sm:p-6 shadow-sm space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            Greetings! I am <strong class="text-peacock-900">Hema Belagali</strong>, a Kannada tutor and <strong class="text-peacock-900">retired primary school principal</strong> with over <strong class="text-peacock-900">10 years of teaching experience</strong>. For the past 5 years, I have been conducting <strong class="text-peacock-900">online Kannada classes</strong> from Bangalore, helping students across Grades 1–10 achieve strong academic results.
+                        </p>
+                        <p>
+                            I offer <strong class="text-peacock-900">Kannada basics</strong> for beginners, <strong class="text-peacock-900">vacation grammar classes</strong> (sentence framing, comprehension, and spelling support), and <strong class="text-peacock-900">regular school syllabus classes starting every June</strong>. Limited slots are available across boards and grades, and admissions—including any vacant seats after the academic year begins—are filled on a <strong class="text-coral-600">first-come, first-served basis</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="flex flex-wrap gap-2 pt-0.5">
+                        <span class="px-3 py-1.5 rounded-xl bg-peacock-50 text-peacock-800 border border-peacock-100 text-xs font-bold">
+                            <i class="fa-solid fa-laptop text-peacock-600 mr-1.5"></i>100% Online Classes
+                        </span>
+                        <span class="px-3 py-1.5 rounded-xl bg-coral-50 text-coral-600 border border-coral-100 text-xs font-bold">
+                            <i class="fa-solid fa-sun text-coral-500 mr-1.5"></i>Vacation Basics & Grammar
+                        </span>
+                        <span class="px-3 py-1.5 rounded-xl bg-marigold-50 text-marigold-600 border border-marigold-100 text-xs font-bold">
+                            <i class="fa-solid fa-calendar-check text-marigold-500 mr-1.5"></i>June School Syllabus (Grades 1–10)
+                        </span>
+                    </div>
+
+                    <!-- Direct Contact Actions -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                        <a href="tel:+919480407099" class="inline-flex items-center justify-center gap-2.5 bg-peacock-700 hover:bg-peacock-800 text-white font-bold px-6 py-3.5 rounded-2xl shadow-md shadow-peacock-700/20 transition-all">
+                            <i class="fa-solid fa-phone text-marigold-400"></i>
+                            <span>Register Early: 94804 07099</span>
+                        </a>
+                        <a href="https://wa.me/919480407099?text=Namaskara%20Hema%20Ma'am,%20I%20would%20like%20to%20enquire%20about%20online%20Kannada%20classes%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-emerald-50 text-peacock-900 border-2 border-peacock-700/20 font-bold px-6 py-3.5 rounded-2xl transition-all">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
+                            <span>Enquire on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Illustrated Student & Teacher Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white border-2 border-peacock-100 rounded-3xl p-5 sm:p-6 shadow-xl shadow-peacock-900/5">
+                        <!-- Decorative Corner Shapes -->
+                        <div aria-hidden="true" class="absolute -top-4 -right-4 w-12 h-12 rounded-2xl bg-marigold-400 rotate-12 flex items-center justify-center text-peacock-900 font-kannada font-bold text-xl shadow-md">
+                            ಅ
+                        </div>
+                        <div aria-hidden="true" class="absolute -bottom-3 -left-3 w-10 h-10 rounded-full bg-coral-500 flex items-center justify-center text-white text-sm shadow-md">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <!-- Teacher Photo Frame -->
+                        <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-peacock-50 via-marigold-50 to-coral-50 border border-peacock-100 aspect-[4/3] mb-4 flex flex-col items-center justify-center">
+                            <img id="hema-hero-img" src="images/hema-belagali.jpg" alt="Hema Belagali, Kannada tutor" width="640" height="640" fetchpriority="high" class="w-full h-full object-cover object-top">
+                        </div>
+
+                        <!-- Teacher Details -->
+                        <div class="flex items-center justify-between gap-3">
+                            <div>
+                                <h2 class="font-display text-2xl font-bold text-peacock-900">Hema Belagali</h2>
+                                <p class="text-xs font-semibold text-peacock-700">Kannada Tutor • Retired Primary School Principal</p>
+                            </div>
+                            <span class="font-kannada text-sm font-bold bg-marigold-100 text-peacock-900 px-3 py-1.5 rounded-xl border border-marigold-400/40">
+                                ಹೇಮಾ ಬೆಳಗಲಿ
+                            </span>
+                        </div>
+
+                        <div class="mt-3.5 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-peacock-50/70 rounded-xl px-3 py-2">
+                                <div class="text-[11px] text-slate-500 font-medium">Teaching Experience</div>
+                                <div class="font-bold text-peacock-900">10+ Years (5 Yrs Online)</div>
+                            </div>
+                            <div class="bg-coral-50/70 rounded-xl px-3 py-2">
+                                <div class="text-[11px] text-slate-500 font-medium">Admission</div>
+                                <div class="font-bold text-coral-600">Limited Slots • Register Early</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                            <span class="font-semibold text-slate-600"><i class="fa-solid fa-phone text-coral-500 mr-1.5"></i>Call / WhatsApp:</span>
+                            <a href="tel:+919480407099" class="font-display font-bold text-base text-peacock-800 hover:text-coral-600">94804 07099</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playful Wavy SVG Divider -->
+        <div class="w-full overflow-hidden leading-none mt-10 -mb-16 sm:-mb-20">
+            <svg viewBox="0 0 1200 70" preserveAspectRatio="none" class="w-full h-10 sm:h-14 fill-white">
+                <path d="M0,35 C300,80 450,-10 750,35 C950,65 1100,15 1200,30 L1200,70 L0,70 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- WHAT STUDENTS LEARN & ADMISSION DETAILS (GRADES 1–10)                 -->
+    <!-- ===================================================================== -->
+    <section id="syllabus-focus" class="bg-white py-14 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-block bg-peacock-50 text-peacock-700 font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Online Classes for Grades 1–10
+                </span>
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-peacock-900">
+                    How Students Learn with Hema Ma’am
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2">
+                    Focused online guidance for students across different schools and boards—with limited seats allotted on a first-come, first-served basis.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Kannada Basics for Beginners -->
+                <div class="relative bg-marigold-50/70 border-2 border-marigold-100 rounded-3xl p-6 sm:p-7 overflow-hidden">
+                    <div aria-hidden="true" class="absolute -right-6 -bottom-6 font-kannada text-8xl font-bold text-marigold-400/20 select-none">ಅ</div>
+                    <div class="w-12 h-12 rounded-2xl bg-marigold-400 text-peacock-900 flex items-center justify-center text-xl font-bold mb-5 shadow-sm">
+                        <span class="font-kannada">ಅ ಆ</span>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-peacock-900 mb-2">1. Kannada Basics for Beginners</h3>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4">
+                        Ideal for children learning Kannada newly—building step-by-step confidence in Swaragalu, Vyanjanagalu, Kagunita, and Ottakshara.
+                    </p>
+                    <ul class="space-y-2 text-xs font-semibold text-peacock-900">
+                        <li><i class="fa-solid fa-circle-check text-marigold-600 mr-1.5"></i>Letter recognition & neat handwriting</li>
+                        <li><i class="fa-solid fa-circle-check text-marigold-600 mr-1.5"></i>Clear pronunciation & reading practice</li>
+                        <li><i class="fa-solid fa-circle-check text-marigold-600 mr-1.5"></i>Strong foundation before school exams</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Vacation Grammar & Spelling Support -->
+                <div class="relative bg-coral-50/70 border-2 border-coral-100 rounded-3xl p-6 sm:p-7 overflow-hidden">
+                    <div aria-hidden="true" class="absolute -right-5 -bottom-6 font-kannada text-8xl font-bold text-coral-500/10 select-none">ಕ</div>
+                    <div class="w-12 h-12 rounded-2xl bg-coral-500 text-white flex items-center justify-center text-lg mb-5 shadow-sm">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-peacock-900 mb-2">2. Vacation Grammar & Spelling</h3>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4">
+                        Special vacation sessions for students struggling with framing sentences, understanding Kannada passages, or making spelling mistakes.
+                    </p>
+                    <ul class="space-y-2 text-xs font-semibold text-peacock-900">
+                        <li><i class="fa-solid fa-circle-check text-coral-500 mr-1.5"></i>Sentence framing & comprehension clarity</li>
+                        <li><i class="fa-solid fa-circle-check text-coral-500 mr-1.5"></i>Spelling accuracy & dictation drills</li>
+                        <li><i class="fa-solid fa-circle-check text-coral-500 mr-1.5"></i>Core Kannada Vyakarana rules</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Regular School Syllabus (From June) -->
+                <div class="relative bg-peacock-50/70 border-2 border-peacock-100 rounded-3xl p-6 sm:p-7 overflow-hidden">
+                    <div aria-hidden="true" class="absolute -right-5 -bottom-6 font-kannada text-8xl font-bold text-peacock-600/10 select-none">ಪಠ್ಯ</div>
+                    <div class="w-12 h-12 rounded-2xl bg-peacock-700 text-white flex items-center justify-center text-lg mb-5 shadow-sm">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-peacock-900 mb-2">3. School Syllabus (From June)</h3>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4">
+                        Regular academic-year classes for Grades 1–10 starting in June, with any remaining seats open on a first-come, first-served basis.
+                    </p>
+                    <ul class="space-y-2 text-xs font-semibold text-peacock-900">
+                        <li><i class="fa-solid fa-circle-check text-peacock-600 mr-1.5"></i>Prose (ಗದ್ಯ), poetry (ಪದ್ಯ) & notes</li>
+                        <li><i class="fa-solid fa-circle-check text-peacock-600 mr-1.5"></i>Limited slots across schools & boards</li>
+                        <li><i class="fa-solid fa-circle-check text-peacock-600 mr-1.5"></i>Consistent results year after year</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Topics Covered in Basic Course (Step-by-Step 9-Topic Roadmap) -->
+            <div class="mt-12 bg-gradient-to-br from-ivory via-marigold-50/40 to-peacock-50/50 border-2 border-peacock-100 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
+                <div aria-hidden="true" class="pointer-events-none select-none absolute -right-6 -top-6 font-kannada text-8xl font-bold text-peacock-700/5">ಕ ಖ ಗ</div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 mb-6 border-b border-peacock-100">
+                    <div>
+                        <span class="inline-flex items-center gap-1.5 bg-marigold-100 text-peacock-900 font-bold text-xs px-3 py-1 rounded-full mb-2">
+                            <span class="font-kannada">ಪ್ರಾರಂಭಿಕ ಕನ್ನಡ ಪಠ್ಯಕ್ರಮ</span>
+                            <span>• Step-by-Step Foundation</span>
+                        </span>
+                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-peacock-900">
+                            Topics Covered in Basic Course (<span class="font-kannada text-coral-600">ಪ್ರಾರಂಭಿಕ ಕನ್ನಡ</span>)
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                            Structured step-by-step progression from Kannada letters to reading and sentence framing.
+                        </p>
+                    </div>
+                    <span class="self-start sm:self-center text-xs font-bold bg-peacock-700 text-white px-3.5 py-1.5 rounded-full">
+                        9 Structured Modules + Word Building
+                    </span>
+                </div>
+
+                <!-- Stage 1: Topics 1 to 5 + First Word Making Milestone -->
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                        <!-- Topic 1 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="w-7 h-7 rounded-xl bg-marigold-400 text-peacock-900 font-display font-bold text-xs flex items-center justify-center">1</span>
+                                </div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಸ್ವರಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Swaragalu</div>
+                            </div>
+                            <div class="text-[11px] font-medium text-slate-500 mt-2">Vowels (ಅ – ಅಃ)</div>
+                        </div>
+
+                        <!-- Topic 2 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="w-7 h-7 rounded-xl bg-marigold-400 text-peacock-900 font-display font-bold text-xs flex items-center justify-center">2</span>
+                                </div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಯೋಗವಾಹಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Yogavahagalu</div>
+                            </div>
+                            <div class="text-[11px] font-medium text-slate-500 mt-2">Anusvara &amp; Visarga (ಅಂ, ಅಃ)</div>
+                        </div>
+
+                        <!-- Topic 3 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="w-7 h-7 rounded-xl bg-marigold-400 text-peacock-900 font-display font-bold text-xs flex items-center justify-center">3</span>
+                                </div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ವ್ಯಂಜನಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Vyanjanagalu</div>
+                            </div>
+                            <div class="text-[11px] font-medium text-slate-500 mt-2">Consonants (ಕ – ಳ)</div>
+                        </div>
+
+                        <!-- Topic 4 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="w-7 h-7 rounded-xl bg-marigold-400 text-peacock-900 font-display font-bold text-xs flex items-center justify-center">4</span>
+                                </div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ವರ್ಗೀಯ ವ್ಯಂಜನಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Vargeeya Vyanjanagalu</div>
+                            </div>
+                            <div class="text-[11px] font-medium text-slate-500 mt-2">Structured Consonants (ಕ – ಮ)</div>
+                        </div>
+
+                        <!-- Topic 5 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="w-7 h-7 rounded-xl bg-marigold-400 text-peacock-900 font-display font-bold text-xs flex items-center justify-center">5</span>
+                                </div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಅವರ್ಗೀಯ ವ್ಯಂಜನಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Avargeeya Vyanjanagalu</div>
+                            </div>
+                            <div class="text-[11px] font-medium text-slate-500 mt-2">Unstructured Consonants (ಯ – ಳ)</div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 1 Banner -->
+                    <div class="bg-marigold-100/90 border-2 border-marigold-400/60 rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-xl bg-coral-500 text-white flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </span>
+                            <span class="text-xs sm:text-sm font-bold text-peacock-900">
+                                Milestone Practice: Word Making using all the above (Swaragalu, Yogavahagalu &amp; Vyanjanagalu)
+                            </span>
+                        </div>
+                        <span class="font-kannada text-xs font-bold text-peacock-800 bg-white/80 px-2.5 py-1 rounded-lg">ಸರಳ ಪದ ರಚನೆ</span>
+                    </div>
+
+                    <!-- Stage 2: Topics 6 & 7 + Second Word Making Milestone -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                        <!-- Topic 6 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex items-start gap-3.5">
+                            <span class="w-8 h-8 rounded-xl bg-peacock-700 text-white font-display font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">6</span>
+                            <div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಗುಣಿತಾಕ್ಷರಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Gunitaksharagalu</div>
+                                <div class="text-xs text-slate-500 mt-0.5">Vowel-Consonant combinations (Kagunita: ಕ ಕಾ ಕಿ ಕೀ...)</div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 7 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex items-start gap-3.5">
+                            <span class="w-8 h-8 rounded-xl bg-peacock-700 text-white font-display font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">7</span>
+                            <div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಒತ್ತಕ್ಷರಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Vattaksharagalu</div>
+                                <div class="text-xs text-slate-500 mt-0.5">Conjunct / Double Consonants (ಕ್ಕ, ತ್ತ, ನ್ನ...)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 Banner -->
+                    <div class="bg-peacock-700 text-white rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-xl bg-marigold-400 text-peacock-900 flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-spell-check"></i>
+                            </span>
+                            <span class="text-xs sm:text-sm font-bold">
+                                Milestone Practice: Word Making using all the above (with Gunitaksharagalu &amp; Vattaksharagalu)
+                            </span>
+                        </div>
+                        <span class="font-kannada text-xs font-bold text-marigold-400 bg-peacock-900/60 px-2.5 py-1 rounded-lg">ಪದಗಳ ರಚನೆ</span>
+                    </div>
+
+                    <!-- Stage 3: Topics 8 & 9 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                        <!-- Topic 8 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex items-start gap-3.5">
+                            <span class="w-8 h-8 rounded-xl bg-coral-500 text-white font-display font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">8</span>
+                            <div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಸಂಖ್ಯೆಗಳು ಮತ್ತು ಸಂಖ್ಯಾ ನಾಮಗಳು</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Numbers and Number Names in Kannada</div>
+                                <div class="text-xs text-slate-500 mt-0.5">Kannada numerals (೧, ೨, ೩...) and number words (ಒಂದು, ಎರಡು...)</div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 9 -->
+                        <div class="bg-white border-2 border-peacock-100 rounded-2xl p-4 flex items-start gap-3.5">
+                            <span class="w-8 h-8 rounded-xl bg-coral-500 text-white font-display font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">9</span>
+                            <div>
+                                <div class="font-kannada text-base font-bold text-peacock-900">ಸಣ್ಣ ವಾಕ್ಯ ರಚನೆ</div>
+                                <div class="font-display font-bold text-sm text-peacock-800">Making Small Sentences</div>
+                                <div class="text-xs text-slate-500 mt-0.5">Framing clear, grammatically accurate simple sentences</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- CLASS TIMINGS & 8-BATCH ALLOCATION SECTION                            -->
+    <!-- ===================================================================== -->
+    <section id="batch-timings" class="py-14 sm:py-20 bg-ivory border-t border-peacock-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="inline-block bg-marigold-100 text-peacock-900 font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    8 Weekly Batches • 40 Minutes per Class
+                </span>
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-peacock-900">
+                    Class Timings &amp; Batch Allocation
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2">
+                    Choose your top 3 preferred batches below. Classes run twice a week for 40 minutes each session.
+                </p>
+            </div>
+
+            <!-- 8 Batches Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <!-- Monday & Wednesday -->
+                <div class="bg-white border-2 border-peacock-100 rounded-3xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-peacock-100">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-10 h-10 rounded-2xl bg-peacock-700 text-white flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-display text-lg sm:text-xl font-bold text-peacock-900">Monday &amp; Wednesday</h3>
+                                <p class="text-xs font-semibold text-peacock-600">Batches 1 to 4 • 40 Mins / Class</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold bg-peacock-50 text-peacock-800 px-3 py-1 rounded-full">4 Batches</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div class="bg-peacock-50/70 border border-peacock-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">1st Batch</span>
+                            <span class="font-display font-bold text-coral-600 bg-white px-2.5 py-1 rounded-xl border border-peacock-100">4:15 PM</span>
+                        </div>
+                        <div class="bg-peacock-50/70 border border-peacock-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">2nd Batch</span>
+                            <span class="font-display font-bold text-coral-600 bg-white px-2.5 py-1 rounded-xl border border-peacock-100">5:15 PM</span>
+                        </div>
+                        <div class="bg-peacock-50/70 border border-peacock-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">3rd Batch</span>
+                            <span class="font-display font-bold text-coral-600 bg-white px-2.5 py-1 rounded-xl border border-peacock-100">6:15 PM</span>
+                        </div>
+                        <div class="bg-peacock-50/70 border border-peacock-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">4th Batch</span>
+                            <span class="font-display font-bold text-coral-600 bg-white px-2.5 py-1 rounded-xl border border-peacock-100">7:15 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuesday & Thursday -->
+                <div class="bg-white border-2 border-marigold-100 rounded-3xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-marigold-100">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-10 h-10 rounded-2xl bg-marigold-400 text-peacock-900 flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-week"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-display text-lg sm:text-xl font-bold text-peacock-900">Tuesday &amp; Thursday</h3>
+                                <p class="text-xs font-semibold text-marigold-600">Batches 5 to 8 • 40 Mins / Class</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold bg-marigold-100 text-peacock-900 px-3 py-1 rounded-full">4 Batches</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div class="bg-marigold-50/80 border border-marigold-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">5th Batch</span>
+                            <span class="font-display font-bold text-peacock-800 bg-white px-2.5 py-1 rounded-xl border border-marigold-100">4:15 PM</span>
+                        </div>
+                        <div class="bg-marigold-50/80 border border-marigold-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">6th Batch</span>
+                            <span class="font-display font-bold text-peacock-800 bg-white px-2.5 py-1 rounded-xl border border-marigold-100">5:15 PM</span>
+                        </div>
+                        <div class="bg-marigold-50/80 border border-marigold-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">7th Batch</span>
+                            <span class="font-display font-bold text-peacock-800 bg-white px-2.5 py-1 rounded-xl border border-marigold-100">6:15 PM</span>
+                        </div>
+                        <div class="bg-marigold-50/80 border border-marigold-100 rounded-2xl p-3.5 flex items-center justify-between">
+                            <span class="font-bold text-peacock-900">8th Batch</span>
+                            <span class="font-display font-bold text-peacock-800 bg-white px-2.5 py-1 rounded-xl border border-marigold-100">7:15 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Allocation Rules & Interactive 3-Preference Selector -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Allocation Rules -->
+                <div class="lg:col-span-5 bg-peacock-900 text-white rounded-3xl p-6 sm:p-7 space-y-4">
+                    <span class="inline-block bg-marigold-400 text-peacock-900 font-bold text-xs px-3 py-1 rounded-full">
+                        How Batch Allotment Works
+                    </span>
+                    <h3 class="font-display text-xl sm:text-2xl font-bold">3-Preference Batch Allotment</h3>
+                    <ul class="space-y-3.5 text-xs sm:text-sm text-peacock-100 leading-relaxed">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-6 h-6 rounded-full bg-marigold-400 text-peacock-900 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                            <span>Each student selects <strong class="text-white">3 preferential batches</strong> (1st, 2nd, and 3rd preference).</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-6 h-6 rounded-full bg-marigold-400 text-peacock-900 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                            <span>Your <strong class="text-white">1st preference</strong> is prioritized on a <strong class="text-marigold-400">first-come, first-served basis</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-6 h-6 rounded-full bg-marigold-400 text-peacock-900 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                            <span>If students from the <strong class="text-white">same grade and same school</strong> submit different preferences, Hema Ma’am creates a dedicated WhatsApp group for that grade to finalize a common batch together.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3-Preference Interactive Form -->
+                <div class="lg:col-span-7 bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-7 shadow-sm">
+                    <h3 class="font-display text-xl font-bold text-peacock-900 mb-1">Submit Your 3 Batch Preferences</h3>
+                    <p class="text-xs text-slate-500 mb-4">Fill in student details and send your 3 batch choices directly to Hema Ma’am on WhatsApp.</p>
+
+                    <form onsubmit="sendBatchPreferencesWhatsApp(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-peacock-900 mb-1">Student Name *</label>
+                                <input type="text" id="pref-student-name" required oninput="updateBatchPreview()" placeholder="Student Name" class="w-full px-3 py-2 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-peacock-900 mb-1">Grade (1–10) *</label>
+                                <select id="pref-grade" onchange="updateBatchPreview()" class="w-full px-3 py-2 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none">
+                                    <option value="Grade 1">Grade 1</option>
+                                    <option value="Grade 2">Grade 2</option>
+                                    <option value="Grade 3">Grade 3</option>
+                                    <option value="Grade 4">Grade 4</option>
+                                    <option value="Grade 5" selected>Grade 5</option>
+                                    <option value="Grade 6">Grade 6</option>
+                                    <option value="Grade 7">Grade 7</option>
+                                    <option value="Grade 8">Grade 8</option>
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-peacock-900 mb-1">School Name *</label>
+                                <input type="text" id="pref-school" required oninput="updateBatchPreview()" placeholder="School Name" class="w-full px-3 py-2 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-coral-600 mb-1">1st Preference *</label>
+                                <select id="pref-1" onchange="handlePreferenceChange()" class="w-full px-3 py-2 text-xs font-semibold rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none"></select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-peacock-800 mb-1">2nd Preference *</label>
+                                <select id="pref-2" onchange="handlePreferenceChange()" class="w-full px-3 py-2 text-xs font-semibold rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none"></select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-peacock-800 mb-1">3rd Preference *</label>
+                                <select id="pref-3" onchange="handlePreferenceChange()" class="w-full px-3 py-2 text-xs font-semibold rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none"></select>
+                            </div>
+                        </div>
+
+                        <p id="pref-duplicate-warning" class="hidden text-xs font-bold text-coral-600 bg-coral-50 px-3 py-2 rounded-xl">
+                            Please choose 3 different batches for your 1st, 2nd, and 3rd preferences.
+                        </p>
+
+                        <div class="bg-ivory border border-slate-200 rounded-2xl p-3">
+                            <div class="text-[11px] font-bold text-slate-500 mb-1">Message Preview:</div>
+                            <pre id="batch-message-preview" class="text-xs text-slate-700 whitespace-pre-wrap font-sans leading-relaxed"></pre>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button type="submit" class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3 px-4 rounded-xl shadow-sm transition-colors cursor-pointer">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Send Preferences on WhatsApp</span>
+                            </button>
+                            <button type="button" onclick="copyBatchPreferences()" class="inline-flex items-center justify-center gap-2 bg-peacock-50 hover:bg-peacock-100 text-peacock-900 font-bold text-sm py-3 px-4 rounded-xl transition-colors cursor-pointer">
+                                <i class="fa-regular fa-copy"></i>
+                                <span id="copy-pref-label">Copy Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- INTERACTIVE STUDY CORNER (NO AUDIO — VISUAL READING & PRACTICE)       -->
+    <!-- ===================================================================== -->
+    <section id="study-corner" class="py-14 sm:py-20 bg-peacock-50/50 border-t border-peacock-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="inline-block bg-white text-peacock-800 border border-peacock-100 font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Interactive Practice • <span class="font-kannada">ಅಭ್ಯಾಸ ಮೂಲ</span>
+                </span>
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-peacock-900">
+                    Student Study Corner
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2">
+                    Explore Kannada Vowels, School Words, Numbers 1–10, and a quick self-check quiz.
+                </p>
+            </div>
+
+            <!-- Study Tabs -->
+            <div class="flex flex-wrap justify-center gap-2.5 mb-8">
+                <button type="button" onclick="switchStudyTab('vowels')" id="tab-vowels" class="study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-peacock-700 text-white shadow-sm cursor-pointer">
+                    1. Vowels (ಸ್ವರಗಳು)
+                </button>
+                <button type="button" onclick="switchStudyTab('words')" id="tab-words" class="study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-white text-peacock-900 border border-peacock-100 cursor-pointer">
+                    2. School Words (ಪದಗಳು)
+                </button>
+                <button type="button" onclick="switchStudyTab('numbers')" id="tab-numbers" class="study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-white text-peacock-900 border border-peacock-100 cursor-pointer">
+                    3. Numbers (ಸಂಖ್ಯೆಗಳು)
+                </button>
+                <button type="button" onclick="switchStudyTab('quiz')" id="tab-quiz" class="study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-white text-peacock-900 border border-peacock-100 cursor-pointer">
+                    4. Quick Quiz
+                </button>
+            </div>
+
+            <!-- Panel 1: Vowels -->
+            <div id="panel-vowels" class="study-panel bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-8 shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-5 bg-gradient-to-br from-marigold-50 to-peacock-50 border-2 border-marigold-100 rounded-3xl p-6 text-center">
+                        <div class="text-xs font-bold uppercase tracking-wider text-peacock-700 mb-2">Selected Swara</div>
+                        <div id="vowel-display-char" class="font-kannada text-7xl sm:text-8xl font-bold text-peacock-900 leading-normal py-2">ಅ</div>
+                        <div id="vowel-display-sound" class="text-sm font-bold text-coral-600 mt-1">"a" (as in America)</div>
+                        <div id="vowel-display-word" class="font-kannada text-base sm:text-lg font-bold text-peacock-800 bg-white px-4 py-2 rounded-2xl border border-peacock-100 mt-3 inline-block">ಅಮ್ಮ (Amma) — Mother</div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="text-xs font-bold text-slate-500 mb-3">Tap any letter below to view its example word:</div>
+                        <div id="vowels-grid" class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-2.5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Words -->
+            <div id="panel-words" class="study-panel hidden bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-8 shadow-sm">
+                <div id="words-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5"></div>
+            </div>
+
+            <!-- Panel 3: Numbers -->
+            <div id="panel-numbers" class="study-panel hidden bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-8 shadow-sm">
+                <p class="text-xs font-semibold text-slate-500 text-center mb-4">Tap any card to flip between Kannada numeral and number name:</p>
+                <div id="numbers-grid" class="grid grid-cols-2 sm:grid-cols-5 gap-3.5"></div>
+            </div>
+
+            <!-- Panel 4: Quiz -->
+            <div id="panel-quiz" class="study-panel hidden bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-8 shadow-sm max-w-2xl mx-auto">
+                <div class="flex items-center justify-between text-xs font-bold text-peacock-700 mb-3">
+                    <span id="quiz-progress">Question 1 of 5</span>
+                    <span id="quiz-score-badge" class="bg-marigold-100 text-peacock-900 px-3 py-1 rounded-full">Score: 0</span>
+                </div>
+                <h3 id="quiz-question-text" class="font-display text-lg sm:text-xl font-bold text-peacock-900 mb-4"></h3>
+                <div id="quiz-options" class="space-y-2.5"></div>
+                <div id="quiz-feedback" class="hidden mt-4 p-3.5 rounded-2xl text-xs sm:text-sm font-semibold"></div>
+                <div class="mt-5 flex justify-end">
+                    <button type="button" id="quiz-next-btn" onclick="nextQuizQuestion()" class="hidden bg-peacock-700 hover:bg-peacock-800 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl cursor-pointer">
+                        Next Question →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- STUDENT GALLERY SECTION (KANNADA RAJYOTSAVA WITH STUDENTS)            -->
+    <!-- ===================================================================== -->
+    <section id="classroom-moments" class="py-14 sm:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="mb-10">
+                <span class="inline-flex items-center gap-1.5 bg-marigold-100 text-peacock-900 font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    <span class="w-2 h-2 rounded-full bg-coral-500"></span>
+                    <span>Student Gallery • <span class="font-kannada">ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ</span></span>
+                </span>
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-peacock-900">
+                    Kannada Rajyotsava with the Students
+                </h2>
+                <p class="font-kannada text-sm sm:text-base font-semibold text-coral-600 mt-1">
+                    ಮಕ್ಕಳೊಂದಿಗೆ ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ ಸಂಭ್ರಮ
+                </p>
+            </div>
+
+            <!-- Student Group Photos Grid (3 Photos) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Photo 1 -->
+                <div class="bg-marigold-50/60 border-2 border-marigold-100 rounded-3xl p-3 sm:p-4 shadow-sm">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-marigold-100/70">
+                        <img id="student-group-img-1" src="images/students-group-1.jpg" alt="Students gathered for a Kannada class celebration" width="1280" height="960" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="bg-peacock-50/60 border-2 border-peacock-100 rounded-3xl p-3 sm:p-4 shadow-sm">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-peacock-100/60">
+                        <img id="student-group-img-2" src="images/students-group-2.jpg" alt="Kannada teacher and students posing together in class" width="1280" height="960" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="bg-coral-50/60 border-2 border-coral-100 rounded-3xl p-3 sm:p-4 shadow-sm">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-coral-100/60">
+                        <img id="student-group-img-3" src="images/students-group-3.jpg" alt="Kannada teacher with a group of students at a class gathering" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- REAL STUDENT REVIEWS SECTION (NO FAKE REVIEWS — STUDENTS SUBMIT OWN)  -->
+    <!-- ===================================================================== -->
+    <section id="student-reviews" class="py-14 sm:py-20 bg-marigold-50/60 border-t border-marigold-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="inline-block bg-white text-coral-600 border border-coral-100 font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Student Voices
+                </span>
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-peacock-900">
+                    Student Reviews
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2">
+                    Are you learning Kannada with Hema Ma’am? Share your experience below to encourage fellow students!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Left: Student Review Submission Form -->
+                <div class="lg:col-span-5 bg-white border-2 border-peacock-100 rounded-3xl p-6 sm:p-7 shadow-sm">
+                    <h3 class="font-display text-xl font-bold text-peacock-900 mb-1">Write Your Review</h3>
+                    <p class="text-xs text-slate-500 mb-5">Your review will appear here for everyone after it has been saved.</p>
+
+                    <form id="student-review-form" onsubmit="addStudentReview(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-peacock-900 mb-1">Student Name *</label>
+                            <input type="text" id="student-name" maxlength="120" required placeholder="Enter your name" class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none">
+                        </div>
+
+                        <div>
+                            <label for="student-grade" class="block text-xs font-bold text-peacock-900 mb-1">Class / Grade, School Name & Board *</label>
+                            <input type="text" id="student-grade" maxlength="250" required placeholder="e.g., Class 6, your school name, CBSE" class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-peacock-900 mb-1">Rating *</label>
+                            <div class="flex items-center gap-2" id="star-selector">
+                                <button type="button" onclick="setRating(1)" class="star-btn text-xl text-marigold-400 cursor-pointer"><i class="fa-solid fa-star"></i></button>
+                                <button type="button" onclick="setRating(2)" class="star-btn text-xl text-marigold-400 cursor-pointer"><i class="fa-solid fa-star"></i></button>
+                                <button type="button" onclick="setRating(3)" class="star-btn text-xl text-marigold-400 cursor-pointer"><i class="fa-solid fa-star"></i></button>
+                                <button type="button" onclick="setRating(4)" class="star-btn text-xl text-marigold-400 cursor-pointer"><i class="fa-solid fa-star"></i></button>
+                                <button type="button" onclick="setRating(5)" class="star-btn text-xl text-marigold-400 cursor-pointer"><i class="fa-solid fa-star"></i></button>
+                                <span id="rating-label" class="text-xs font-semibold text-slate-500 ml-1">5 / 5</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-peacock-900 mb-1">Your Review *</label>
+                            <textarea id="student-message" rows="3" maxlength="3000" required placeholder="How have Hema Ma'am's Kannada classes helped you?" class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-ivory border border-slate-200 focus:border-peacock-600 outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-coral-500 hover:bg-coral-600 text-white font-bold text-sm py-3 rounded-xl shadow-sm transition-colors cursor-pointer">
+                            Post Student Review
+                        </button>
+                        <p id="review-submit-status" role="status" aria-live="polite" class="hidden text-sm font-semibold text-peacock-900"></p>
+                    </form>
+                </div>
+
+                <!-- Right: Real Student Reviews Wall (Empty until students submit) -->
+                <div class="lg:col-span-7">
+                    <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-peacock-100 rounded-2xl px-4 py-2.5 mb-4 shadow-2xs">
+                        <span class="text-xs font-semibold text-slate-600">Student Reviews Wall</span>
+                        <button type="button" onclick="loadStudentReviews()" class="text-xs font-bold text-peacock-700 hover:text-coral-600 px-3 py-1.5 rounded-xl cursor-pointer">Refresh reviews</button>
+                    </div>
+                    <p id="reviews-load-status" role="status" aria-live="polite" class="mb-4 text-sm font-semibold text-peacock-900">Loading student reviews…</p>
+
+                    <div id="reviews-empty-state" class="hidden bg-white/90 border-2 border-dashed border-peacock-200 rounded-3xl p-8 sm:p-12 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-peacock-50 text-peacock-700 flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-peacock-900">Be the First Student to Leave a Review!</h4>
+                        <p class="text-sm text-slate-600 max-w-md mx-auto mt-2">
+                            Only genuine reviews written by Hema Ma’am’s students appear here. Use the form on the left to share how your Kannada reading, writing, or school marks improved.
+                        </p>
+                    </div>
+
+                    <div id="student-reviews-list" aria-busy="true" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Student-submitted reviews appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- DIRECT CONTACT BANNER & FOOTER                                        -->
+    <!-- ===================================================================== -->
+    <section class="bg-peacock-900 text-white py-12 sm:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-5">
+            <div class="font-kannada text-marigold-400 text-xl font-bold">ಕನ್ನಡ ಕಲಿಯಿರಿ • Learn Kannada</div>
+            <h2 class="font-display text-2xl sm:text-4xl font-bold">
+                Have Questions About Kannada Classes?
+            </h2>
+            <p class="text-sm sm:text-base text-peacock-100 max-w-xl mx-auto">
+                Call or WhatsApp <strong class="text-white">Hema Belagali</strong> directly to discuss your child’s class, school board, and Kannada learning needs.
+            </p>
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:+919480407099" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-marigold-400 hover:bg-marigold-500 text-peacock-900 font-display font-bold text-lg px-7 py-3.5 rounded-2xl shadow-lg transition-colors">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 94804 07099</span>
+                </a>
+                <a href="https://wa.me/919480407099?text=Namaskara%20Hema%20Ma'am,%20I%20would%20like%20to%20enquire%20about%20Kannada%20classes%20for%20students." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base px-7 py-3.5 rounded-2xl transition-colors">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-peacock-950 bg-[#042A2A] text-peacock-100 py-6 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="font-display font-bold text-sm text-white">
+                <span class="font-kannada text-marigold-400">ಬನ್ನಿ ಕನ್ನಡ ಕಲಿಯೋಣ</span> • Banni Kannada Kaliyona (Hema Belagali)
+            </div>
+            <div class="flex items-center gap-5">
+                <a href="tel:+919480407099" class="hover:text-marigold-400">Phone: 94804 07099</a>
+                <a href="https://wa.me/919480407099" target="_blank" rel="noopener noreferrer" class="hover:text-marigold-400">WhatsApp</a>
+                <span>© <span id="year"></span> Hema Belagali</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // =====================================================================
+        // 1. STUDENT STUDY DATA (VOWELS, BASIC WORDS, NUMBERS, SCHOOL QUIZ)
+        // =====================================================================
+        const kannadaVowels = [
+            { char: "ಅ", sound: '"a" (as in America)', word: "ಅಮ್ಮ (Amma) — Mother" },
+            { char: "ಆ", sound: '"ā" (as in Father)', word: "ಆನೆ (Āne) — Elephant" },
+            { char: "ಇ", sound: '"i" (as in India)', word: "ಇಲಿ (Ili) — Mouse" },
+            { char: "ಈ", sound: '"ī" (as in Eagle)', word: "ಈರುಳ್ಳಿ (Īruḷḷi) — Onion" },
+            { char: "ಉ", sound: '"u" (as in Put)', word: "ಉಂಗುರ (Uṅgura) — Ring" },
+            { char: "ಊ", sound: '"ū" (as in School)', word: "ಊಟ (Ūṭa) — Meal" },
+            { char: "ಋ", sound: '"ṛ" (as in Rishi)', word: "ಋಷಿ (Ṛṣi) — Sage" },
+            { char: "ಎ", sound: '"e" (as in Pen)', word: "ಎಲೆ (Ele) — Leaf" },
+            { char: "ಏ", sound: '"ē" (as in Airplane)', word: "ಏಣಿ (Ēṇi) — Ladder" },
+            { char: "ಐ", sound: '"ai" (as in Ice)', word: "ಐದು (Aidu) — Five" },
+            { char: "ಒ", sound: '"o" (as in One)', word: "ಒಂಟೆ (Oṇṭe) — Camel" },
+            { char: "ಓ", sound: '"ō" (as in Open)', word: "ಓದು (Ōdu) — Read / Study" },
+            { char: "ಔ", sound: '"au" (as in Out)', word: "ಔಷಧ (Auṣadha) — Medicine" }
+        ];
+
+        const basicSchoolWords = [
+            { kannada: "ನಮಸ್ಕಾರ", translit: "Namaskāra", meaning: "Hello / Greetings", tag: "Everyday" },
+            { kannada: "ಶಾಲೆ", translit: "Shāle", meaning: "School", tag: "School" },
+            { kannada: "ಪುಸ್ತಕ", translit: "Pustaka", meaning: "Book", tag: "School" },
+            { kannada: "ಶಿಕ್ಷಕರು", translit: "Shikṣakaru", meaning: "Teacher", tag: "School" },
+            { kannada: "ಧನ್ಯವಾದಗಳು", translit: "Dhanyavādagaḷu", meaning: "Thank you", tag: "Everyday" },
+            { kannada: "ನೀರು", translit: "Nīru", meaning: "Water", tag: "Everyday" },
+            { kannada: "ಮನೆ", translit: "Mane", meaning: "House / Home", tag: "Everyday" },
+            { kannada: "ಗೆಳೆಯ", translit: "Geḷeya", meaning: "Friend", tag: "School" },
+            { kannada: "ಹಣ್ಣು", translit: "Haṇṇu", meaning: "Fruit", tag: "Everyday" },
+            { kannada: "ಸೂರ್ಯ", translit: "Sūrya", meaning: "Sun", tag: "Nature" }
+        ];
+
+        const kannadaNumbers = [
+            { num: "೧", digit: "1", word: "ಒಂದು", translit: "Ondu" },
+            { num: "೨", digit: "2", word: "ಎರಡು", translit: "Eraḍu" },
+            { num: "೩", digit: "3", word: "ಮೂರು", translit: "Mūru" },
+            { num: "೪", digit: "4", word: "ನಾಲ್ಕು", translit: "Nālku" },
+            { num: "೫", digit: "5", word: "ಐದು", translit: "Aidu" },
+            { num: "೬", digit: "6", word: "ಆರು", translit: "Āru" },
+            { num: "೭", digit: "7", word: "ಏಳು", translit: "Ēḷu" },
+            { num: "೮", digit: "8", word: "ಎಂಟು", translit: "Eṇṭu" },
+            { num: "೯", digit: "9", word: "ಒಂಬತ್ತು", translit: "Ombattu" },
+            { num: "೧೦", digit: "10", word: "ಹತ್ತು", translit: "Hattu" }
+        ];
+
+        const schoolQuizQuestions = [
+            {
+                prompt: "What does the Kannada word 'ಶಾಲೆ' (Shāle) mean?",
+                options: ["Book", "School", "Tree", "Flower"],
+                correct: 1,
+                explanation: "'ಶಾಲೆ' (Shāle) means School."
+            },
+            {
+                prompt: "Which Kannada vowel starts the word 'ಆನೆ' (Āne - Elephant)?",
+                options: ["ಅ", "ಆ", "ಇ", "ಉ"],
+                correct: 1,
+                explanation: "'ಆ' (Ā) is the second vowel in Kannada Swaragalu, as in ಆನೆ (Āne)."
+            },
+            {
+                prompt: "What is the Kannada word for 'Book'?",
+                options: ["ಪುಸ್ತಕ (Pustaka)", "ನೀರು (Nīru)", "ಮನೆ (Mane)", "ಗೆಳೆಯ (Geḷeya)"],
+                correct: 0,
+                explanation: "'ಪುಸ್ತಕ' (Pustaka) means Book."
+            },
+            {
+                prompt: "Which Kannada numeral represents the number 5 (ಐದು - Aidu)?",
+                options: ["೩", "೪", "೫", "೭"],
+                correct: 2,
+                explanation: "'೫' is 5 (ಐದು - Aidu)."
+            },
+            {
+                prompt: "What does 'ಓದು' (Ōdu) mean in English?",
+                options: ["Sleep", "Read / Study", "Run", "Eat"],
+                correct: 1,
+                explanation: "'ಓದು' (Ōdu) means to Read or Study!"
+            }
+        ];
+
+        let currentVowelIdx = 0;
+        let quizIdx = 0;
+        let quizScore = 0;
+        let quizLocked = false;
+        let selectedRating = 5;
+        let studentReviews = [];
+        let loadingReviews = false;
+        let postingReview = false;
+
+        // =====================================================================
+        // 2. RENDER STUDY CORNER TABS
+        // =====================================================================
+        function switchStudyTab(tabName) {
+            document.querySelectorAll('.study-panel').forEach(p => p.classList.add('hidden'));
+            document.querySelectorAll('.study-tab').forEach(btn => {
+                btn.className = 'study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-white text-peacock-900 border border-peacock-100 cursor-pointer';
+            });
+            const activePanel = document.getElementById(`panel-${tabName}`);
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            if (activePanel) activePanel.classList.remove('hidden');
+            if (activeBtn) {
+                activeBtn.className = 'study-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold bg-peacock-700 text-white shadow-sm cursor-pointer';
+            }
+        }
+
+        function selectVowel(idx) {
+            currentVowelIdx = idx;
+            const item = kannadaVowels[idx];
+            if (!item) return;
+            document.getElementById('vowel-display-char').textContent = item.char;
+            document.getElementById('vowel-display-sound').textContent = item.sound;
+            document.getElementById('vowel-display-word').textContent = item.word;
+            renderVowels();
+        }
+
+        function renderVowels() {
+            const grid = document.getElementById('vowels-grid');
+            if (!grid) return;
+            grid.innerHTML = kannadaVowels.map((v, idx) => `
+                <button type="button" onclick="selectVowel(${idx})" class="font-kannada text-2xl font-bold py-3 rounded-2xl border-2 transition-all cursor-pointer ${idx === currentVowelIdx ? 'bg-peacock-700 text-white border-peacock-700 shadow-sm' : 'bg-ivory hover:bg-marigold-50 text-peacock-900 border-peacock-100'}">
+                    ${v.char}
+                </button>
+            `).join('');
+        }
+
+        function renderWords() {
+            const grid = document.getElementById('words-grid');
+            if (!grid) return;
+            grid.innerHTML = basicSchoolWords.map(w => `
+                <div class="bg-ivory border-2 border-peacock-100 rounded-2xl p-4 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-marigold-100 text-peacock-900 px-2 py-0.5 rounded-full mb-2">${w.tag}</span>
+                        <div class="font-kannada text-2xl font-bold text-peacock-900 leading-normal">${w.kannada}</div>
+                        <div class="text-xs font-bold text-coral-600">${w.translit}</div>
+                    </div>
+                    <div class="mt-2 pt-2 border-t border-slate-200/70 text-xs font-semibold text-slate-700">${w.meaning}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderNumbers() {
+            const grid = document.getElementById('numbers-grid');
+            if (!grid) return;
+            grid.innerHTML = kannadaNumbers.map(n => `
+                <div onclick="this.classList.toggle('flipped')" class="flip-card h-32 cursor-pointer">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-front absolute inset-0 bg-ivory border-2 border-peacock-100 rounded-2xl p-3 flex flex-col items-center justify-center">
+                            <span class="font-kannada text-4xl font-bold text-peacock-900">${n.num}</span>
+                            <span class="text-xs font-bold text-coral-600 mt-1">${n.digit}</span>
+                        </div>
+                        <div class="flip-back absolute inset-0 bg-peacock-700 text-white rounded-2xl p-3 flex flex-col items-center justify-center">
+                            <span class="font-kannada text-2xl font-bold text-marigold-400">${n.word}</span>
+                            <span class="text-xs font-semibold mt-1">${n.translit} (${n.digit})</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderQuiz() {
+            const q = schoolQuizQuestions[quizIdx];
+            if (!q) return;
+            quizLocked = false;
+            document.getElementById('quiz-progress').textContent = `Question ${quizIdx + 1} of ${schoolQuizQuestions.length}`;
+            document.getElementById('quiz-score-badge').textContent = `Score: ${quizScore}`;
+            document.getElementById('quiz-question-text').textContent = q.prompt;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+
+            document.getElementById('quiz-options').innerHTML = q.options.map((opt, idx) => `
+                <button type="button" onclick="answerQuiz(${idx})" class="quiz-opt-btn w-full text-left px-4 py-3 rounded-2xl border-2 border-peacock-100 bg-ivory hover:bg-peacock-50 text-sm font-semibold text-peacock-900 transition-colors cursor-pointer">
+                    ${opt}
+                </button>
+            `).join('');
+        }
+
+        function answerQuiz(chosenIdx) {
+            if (quizLocked) return;
+            quizLocked = true;
+            const q = schoolQuizQuestions[quizIdx];
+            const isCorrect = chosenIdx === q.correct;
+            if (isCorrect) quizScore++;
+
+            document.getElementById('quiz-score-badge').textContent = `Score: ${quizScore}`;
+            document.querySelectorAll('.quiz-opt-btn').forEach((btn, idx) => {
+                if (idx === q.correct) {
+                    btn.className = 'quiz-opt-btn w-full text-left px-4 py-3 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-sm font-bold text-emerald-900';
+                } else if (idx === chosenIdx) {
+                    btn.className = 'quiz-opt-btn w-full text-left px-4 py-3 rounded-2xl border-2 border-coral-500 bg-coral-50 text-sm font-bold text-coral-900';
+                }
+            });
+
+            const fb = document.getElementById('quiz-feedback');
+            fb.classList.remove('hidden');
+            fb.className = isCorrect
+                ? 'mt-4 p-3.5 rounded-2xl text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-900 border border-emerald-200'
+                : 'mt-4 p-3.5 rounded-2xl text-xs sm:text-sm font-semibold bg-coral-50 text-coral-900 border border-coral-200';
+            fb.textContent = (isCorrect ? 'Correct! ' : 'Good try! ') + q.explanation;
+
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.classList.remove('hidden');
+            nextBtn.textContent = quizIdx < schoolQuizQuestions.length - 1 ? 'Next Question →' : 'Restart Quiz ↻';
+        }
+
+        function nextQuizQuestion() {
+            if (quizIdx < schoolQuizQuestions.length - 1) {
+                quizIdx++;
+            } else {
+                quizIdx = 0;
+                quizScore = 0;
+            }
+            renderQuiz();
+        }
+
+        // =====================================================================
+        // 4. SHARED STUDENT REVIEWS
+        // =====================================================================
+        function setRating(val) {
+            selectedRating = val;
+            document.getElementById('rating-label').textContent = `${val} / 5`;
+            document.querySelectorAll('.star-btn').forEach((btn, idx) => {
+                btn.className = idx < val
+                    ? "star-btn text-xl text-marigold-400 cursor-pointer"
+                    : "star-btn text-xl text-slate-300 cursor-pointer";
+            });
+        }
+
+        async function requestReviews(path, body) {
+            const response = await fetch(path, {
+                method: body ? 'POST' : 'GET',
+                cache: 'no-store',
+                headers: body ? { 'Content-Type': 'application/json' } : {},
+                body: body ? JSON.stringify(body) : undefined,
+                signal: AbortSignal.timeout(20000),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(result.error || 'Reviews are unavailable. Please try again.');
+            if (!Array.isArray(result.reviews)) throw new Error('Reviews are unavailable. Please try again.');
+            return result.reviews;
+        }
+
+        async function recoverBrowserReviews() {
+            let legacy;
+            try {
+                const saved = JSON.parse(localStorage.getItem('hema_real_student_reviews') || '[]');
+                legacy = Array.isArray(saved) ? saved : [];
+            } catch {
+                return;
+            }
+            if (!legacy.length) return;
+            // Keep the original copy until every batch has been safely saved.
+            for (let i = legacy.length; i > 0; i -= 100) {
+                studentReviews = await requestReviews('/api/reviews/import', {
+                    reviews: legacy.slice(Math.max(0, i - 100), i).reverse(),
+                });
+            }
+            try { localStorage.removeItem('hema_real_student_reviews'); } catch {}
+        }
+
+        async function loadStudentReviews() {
+            if (loadingReviews || postingReview) return;
+            loadingReviews = true;
+            const status = document.getElementById('reviews-load-status');
+            const list = document.getElementById('student-reviews-list');
+            list.setAttribute('aria-busy', 'true');
+            status.textContent = 'Loading student reviews…';
+            status.classList.remove('hidden');
+            let recovering = false;
+            try {
+                studentReviews = await requestReviews('/api/reviews');
+                renderStudentReviews();
+                recovering = true;
+                await recoverBrowserReviews();
+                renderStudentReviews();
+                status.classList.add('hidden');
+            } catch (error) {
+                status.textContent = recovering
+                    ? 'Your older reviews are still saved on this browser, but could not be shared yet. Please try Refresh reviews again.'
+                    : 'Reviews could not be loaded. Please try Refresh reviews again.';
+            } finally {
+                loadingReviews = false;
+                list.setAttribute('aria-busy', 'false');
+            }
+        }
+
+        function renderStudentReviews() {
+            const reviews = studentReviews;
+            const emptyState = document.getElementById('reviews-empty-state');
+            const list = document.getElementById('student-reviews-list');
+
+            if (reviews.length === 0) {
+                emptyState.classList.remove('hidden');
+                list.innerHTML = '';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            list.innerHTML = reviews.map((r) => {
+                const stars = Array.from({ length: 5 }, (_, i) =>
+                    `<i class="fa-solid fa-star ${i < r.rating ? 'text-marigold-400' : 'text-slate-200'}"></i>`
+                ).join('');
+
+                return `
+                    <article class="bg-white border-2 border-peacock-100 rounded-3xl p-5 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <div class="text-xs flex gap-1">${stars}</div>
+                            </div>
+                            <p class="text-sm text-slate-700 leading-relaxed">“${escapeHtml(r.message)}”</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-peacock-700 text-white font-display font-bold text-sm flex items-center justify-center shrink-0">
+                                ${escapeHtml(r.name.charAt(0).toUpperCase())}
+                            </div>
+                            <div>
+                                <div class="font-display font-bold text-sm text-peacock-900">${escapeHtml(r.name)}</div>
+                                <div class="text-xs font-semibold text-coral-600">${escapeHtml(r.grade)}</div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        async function addStudentReview(e) {
+            e.preventDefault();
+            if (postingReview) return;
+            const form = e.target;
+            const name = document.getElementById('student-name').value.trim();
+            const grade = document.getElementById('student-grade').value.trim();
+            const message = document.getElementById('student-message').value.trim();
+            const status = document.getElementById('review-submit-status');
+            status.classList.remove('hidden');
+            if (!name || !grade || !message) {
+                status.textContent = 'Please enter your name, class and school, and review.';
+                return;
+            }
+            postingReview = true;
+            const button = form.querySelector('button[type="submit"]');
+            button.disabled = true;
+            button.textContent = 'Posting review…';
+            status.textContent = 'Saving your review…';
+            try {
+                // Wait for an in-flight refresh so it cannot overwrite the new review.
+                while (loadingReviews) await new Promise(resolve => setTimeout(resolve, 50));
+                studentReviews = await requestReviews('/api/reviews', { name, grade, rating: selectedRating, message });
+                renderStudentReviews();
+                document.getElementById('reviews-load-status').classList.add('hidden');
+                form.reset();
+                setRating(5);
+                status.textContent = 'Thank you! Your review is posted and visible to everyone.';
+            } catch (error) {
+                status.textContent = error.name === 'TimeoutError'
+                    ? 'Saving took too long. Please try posting again; your review text is still here.'
+                    : error.message === 'Failed to fetch'
+                        ? 'Your review could not be saved. Check your connection and try again.'
+                        : error.message;
+            } finally {
+                postingReview = false;
+                button.disabled = false;
+                button.textContent = 'Post Student Review';
+            }
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, m => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[m]));
+        }
+
+        function toggleMobileNav() {
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+        }
+
+        // =====================================================================
+        // 5. BATCH PREFERENCES SELECTOR (8 BATCHES: MON/WED & TUE/THU)
+        // =====================================================================
+        const allBatchesList = [
+            "1st Batch — Mon & Wed at 4:15 PM (40 mins)",
+            "2nd Batch — Mon & Wed at 5:15 PM (40 mins)",
+            "3rd Batch — Mon & Wed at 6:15 PM (40 mins)",
+            "4th Batch — Mon & Wed at 7:15 PM (40 mins)",
+            "5th Batch — Tue & Thu at 4:15 PM (40 mins)",
+            "6th Batch — Tue & Thu at 5:15 PM (40 mins)",
+            "7th Batch — Tue & Thu at 6:15 PM (40 mins)",
+            "8th Batch — Tue & Thu at 7:15 PM (40 mins)"
+        ];
+
+        function initBatchDropdowns() {
+            const selects = [
+                { id: 'pref-1', defaultIndex: 0 },
+                { id: 'pref-2', defaultIndex: 1 },
+                { id: 'pref-3', defaultIndex: 4 }
+            ];
+
+            selects.forEach(sel => {
+                const el = document.getElementById(sel.id);
+                if (!el) return;
+                el.innerHTML = allBatchesList.map((label, idx) =>
+                    `<option value="${label}" ${idx === sel.defaultIndex ? 'selected' : ''}>${label}</option>`
+                ).join('');
+            });
+
+            updateBatchPreview();
+        }
+
+        function handlePreferenceChange() {
+            const p1 = document.getElementById('pref-1').value;
+            const p2 = document.getElementById('pref-2').value;
+            const p3 = document.getElementById('pref-3').value;
+            const warn = document.getElementById('pref-duplicate-warning');
+
+            const hasDuplicate = new Set([p1, p2, p3]).size < 3;
+            if (hasDuplicate) {
+                warn.classList.remove('hidden');
+            } else {
+                warn.classList.add('hidden');
+            }
+            updateBatchPreview();
+        }
+
+        function buildBatchMessageText() {
+            const name = document.getElementById('pref-student-name').value.trim() || '[Student Name]';
+            const grade = document.getElementById('pref-grade').value || '[Grade 1–10]';
+            const school = document.getElementById('pref-school').value.trim() || '[School Name]';
+            const p1 = document.getElementById('pref-1').value;
+            const p2 = document.getElementById('pref-2').value;
+            const p3 = document.getElementById('pref-3').value;
+
+            return `Namaskara Hema Ma'am,
+I would like to register for Kannada Online Classes (40 mins/class).
+
+• Student Name: ${name}
+• Grade: ${grade}
+• School Name: ${school}
+
+Batch Preferences:
+1st Preference: ${p1}
+2nd Preference: ${p2}
+3rd Preference: ${p3}`;
+        }
+
+        function updateBatchPreview() {
+            const previewEl = document.getElementById('batch-message-preview');
+            if (previewEl) {
+                previewEl.textContent = buildBatchMessageText();
+            }
+        }
+
+        function sendBatchPreferencesWhatsApp(e) {
+            e.preventDefault();
+            const p1 = document.getElementById('pref-1').value;
+            const p2 = document.getElementById('pref-2').value;
+            const p3 = document.getElementById('pref-3').value;
+
+            if (new Set([p1, p2, p3]).size < 3) {
+                document.getElementById('pref-duplicate-warning').classList.remove('hidden');
+                return;
+            }
+
+            const text = encodeURIComponent(buildBatchMessageText());
+            window.open(`https://wa.me/919480407099?text=${text}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyBatchPreferences() {
+            const text = buildBatchMessageText();
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const label = document.getElementById('copy-pref-label');
+                label.textContent = 'Copied!';
+                setTimeout(() => { label.textContent = 'Copy Message'; }, 2000);
+            } catch (err) {}
+            document.body.removeChild(textarea);
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+            initBatchDropdowns();
+            renderVowels();
+            renderWords();
+            renderNumbers();
+            renderQuiz();
+            loadStudentReviews();
+        });
+        window.addEventListener('focus', () => loadStudentReviews());
+    </script>
+</body>
+</html>
