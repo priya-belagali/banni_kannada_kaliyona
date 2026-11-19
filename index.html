@@ -12,8 +12,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
         tailwind.config = {
             theme: {
                 extend: {
@@ -1428,6 +1428,24 @@ Batch Preferences:
         }
 
         // Initialize
+        
+  const SUPABASE_URL = "https://zfotoyifovhzobzmorij.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_3Zy68ca_P2Y8X9GpG5ddgw_LDY-FHYo";
+  const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  async function loadStudentReviews() {
+    const { data, error } = await supabaseClient
+      .from("student_reviews")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("Error loading reviews:", error);
+      return;
+    }
+    console.log("Loaded reviews:", data);
+  }
+
         window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('year').textContent = new Date().getFullYear();
             initBatchDropdowns();
@@ -1438,6 +1456,39 @@ Batch Preferences:
             loadStudentReviews();
         });
         window.addEventListener('focus', () => loadStudentReviews());
+        async function handleReviewSubmit(event) {
+  event.preventDefault();
+
+  // Check your form/input IDs in index.html and match them here
+  const name = document.getElementById("reviewName")?.value?.trim();
+  const grade = document.getElementById("reviewGrade")?.value?.trim();
+  const rating = Number(document.getElementById("reviewRating")?.value || 5);
+  const message = document.getElementById("reviewMessage")?.value?.trim();
+
+  if (!name || !message) return;
+
+  const { error } = await supabaseClient
+    .from("student_reviews")
+    .insert([{ name, grade, rating, message }]);
+
+  if (error) {
+    console.error("Error saving review:", error);
+    return;
+  }
+
+  event.target.reset();
+  await loadStudentReviews();
+}
+   window.addEventListener("DOMContentLoaded", () => {
+    const reviewForm =
+      document.getElementById("reviewForm") ||
+      document.querySelector("#reviews form, form[onsubmit*='Review'], form");
+
+    if (reviewForm) {
+      reviewForm.addEventListener("submit", handleReviewSubmit);
+    }
+  });     
+        
     </script>
 </body>
 </html>
