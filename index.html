@@ -1,4 +1,4 @@
-whe<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -1209,69 +1209,255 @@ whe<!DOCTYPE html>
         }
 
         async function loadStudentReviews() {
-            if (loadingReviews || postingReview) return;
-            loadingReviews = true;
-            const status = document.getElementById('reviews-load-status');
-            const list = document.getElementById('student-reviews-list');
-            list.setAttribute('aria-busy', 'true');
-            status.textContent = 'Loading student reviews…';
-            status.classList.remove('hidden');
-            let recovering = false;
-            try {
-                studentReviews = await requestReviews('/api/reviews');
-                renderStudentReviews();
-                recovering = true;
-                await recoverBrowserReviews();
-                renderStudentReviews();
-                status.classList.add('hidden');
-            } catch (error) {
-                status.textContent = recovering
-                    ? 'Your older reviews are still saved on this browser, but could not be shared yet. Please try Refresh reviews again.'
-                    : 'Reviews could not be loaded. Please try Refresh reviews again.';
-            } finally {
-                loadingReviews = false;
-                list.setAttribute('aria-busy', 'false');
+            let adminPasscode = "";
+let cachedReviews = [];
+
+function escapeReviewHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function toggleAdminMode() {
+  const btn = document.getElementById("admin-toggle-btn");
+
+  if (adminPasscode) {
+    adminPasscode = "";
+    if (btn) btn.textContent = "Admin";
+    renderStudentReviews(cachedReviews);
+    return;
+  }
+
+  const entered = window.prompt("Enter admin passcode:");
+  if (!entered) return;
+
+  adminPasscode = entered.trim();
+  if (btn) btn.textContent = "Lock Admin";
+  renderStudentReviews(cachedReviews);
+}
+
+async function deleteStudentReview(reviewId) {
+  if (!adminPasscode) {
+    window.alert("Unlock Admin first.");
+    return;
+  }
+
+  const confirmed = window.confirm("Delete this student review permanently?");
+  if (!confirmed) return;
+
+  const { error } = await supabaseClient.rpc("admin_delete_review", {
+    target_review_id: reviewId,
+    entered_passcode: adminPasscode,
+  });
+
+  if (error) {
+    adminPasscode = "";
+    const btn = document.getElementById("admin-toggle-btn");
+    if (btn) btn.textContent = "Admin";
+    renderStudentReviews(cachedReviews);
+    window.alert("Incorrect passcode or unable to delete review.");
+    return;
+  }
+
+  await loadStudentReviews();
+}
+
+function renderStudentReviews(reviews = cachedReviews) {
+  cachedReviews = reviews;
+  const list = document.getElementById("student-reviews-list");
+  const emptyState = document.getElementById("reviews-empty-state");
+
+  if (!list) return;
+
+  if (!reviews.length) {
+    if (emptyState) emptyState.classList.remove("hidden");
+    list.innerHTML = "";
+    return;
+  }
+
+  if (emptyState) emptyState.classList.add("hidden");
+
+  list.innerHTML = reviews
+    .map((r) => {
+      const starsCount = Math.max(1, Math.min(5, Number(r.rating) || 5));
+      const stars = "★".repeat(starsCount) + "☆".repeat(5 - starsCount);
+      const initial = escapeReviewHtml((r.name || "S").trim().charAt(0).toUpperCase());
+
+      return `
+        <div class="bg-white border border-peacock-100 rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="text-marigold-500 text-sm tracking-wide">${stars}</span>
+            ${
+              adminPasscode
+                ? `<button
+                    type="button"
+                    onclick="deleteStudentReview('${escapeReviewHtml(r.id)}')"
+                    class="text-xs font-bold text-coral-600 hover:text-coral-800 cursor-pointer"
+                  >
+                    Delete
+                  </button>`
+                : ""
             }
-        }
+          </div>
+          <p class="text-sm text-slate-700 mb-3">“${escapeReviewHtml(r.message)}”</p>
+          <div class="flex items-center gap-2.5 text-xs text-slate-600">
+            <span class="w-7 h-7 rounded-full bg-peacock-100 text-peacock-800 font-bold flex items-center justify-center">${initial}</span>
+            <span class="font-bold text-peacock-900">${escapeReviewHtml(r.name)}</span>
+            ${r.grade ? `<span>• ${escapeReviewHtml(r.grade)}</span>` : ""}
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+async function loadStudentReviews() {
+  const status = document.getElementById("reviews-load-status");
+  const list = document.getElementById("student-reviews-list");
+
+  if (list) list.setAttribute("aria-busy", "true");
+  if (status) {
+    status.textContent = "Loading student reviews…";
+    status.classList.remove("hidden");
+  }
+
+  const { data, error } = await supabaseClient
+    .from("student_reviews")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (list) list.setAttribute("aria-busy", "false");
+
+  if (error) {
+    console.error("Error loading reviews:", error);
+    if (status) {
+      status.textContent = "Reviews could not be loaded. Please try Refresh reviews again.";
+      status.classList.remove("hidden");
+    }
+    return;
+  }
+
+  if (status) status.classList.add("hidden");
+  renderStudentReviews(data || []);
+}
+           
 
         function renderStudentReviews() {
-            const reviews = studentReviews;
-            const emptyState = document.getElementById('reviews-empty-state');
-            const list = document.getElementById('student-reviews-list');
+            let adminPasscode = "";
+let cachedReviews = [];
 
-            if (reviews.length === 0) {
-                emptyState.classList.remove('hidden');
-                list.innerHTML = '';
-                return;
-            }
+function escapeReviewHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
-            emptyState.classList.add('hidden');
-            list.innerHTML = reviews.map((r) => {
-                const stars = Array.from({ length: 5 }, (_, i) =>
-                    `<i class="fa-solid fa-star ${i < r.rating ? 'text-marigold-400' : 'text-slate-200'}"></i>`
-                ).join('');
+function toggleAdminMode() {
+  const btn = document.getElementById("admin-toggle-btn");
 
-                return `
-                    <article class="bg-white border-2 border-peacock-100 rounded-3xl p-5 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between gap-2 mb-2.5">
-                                <div class="text-xs flex gap-1">${stars}</div>
-                            </div>
-                            <p class="text-sm text-slate-700 leading-relaxed">“${escapeHtml(r.message)}”</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2.5">
-                            <div class="w-9 h-9 rounded-xl bg-peacock-700 text-white font-display font-bold text-sm flex items-center justify-center shrink-0">
-                                ${escapeHtml(r.name.charAt(0).toUpperCase())}
-                            </div>
-                            <div>
-                                <div class="font-display font-bold text-sm text-peacock-900">${escapeHtml(r.name)}</div>
-                                <div class="text-xs font-semibold text-coral-600">${escapeHtml(r.grade)}</div>
-                            </div>
-                        </div>
-                    </article>
-                `;
-            }).join('');
-        }
+  if (adminPasscode) {
+    adminPasscode = "";
+    if (btn) btn.textContent = "Admin";
+    renderStudentReviews(cachedReviews);
+    return;
+  }
+
+  const entered = window.prompt("Enter admin passcode:");
+  if (!entered) return;
+
+  adminPasscode = entered.trim();
+  if (btn) btn.textContent = "Lock Admin";
+  renderStudentReviews(cachedReviews);
+}
+
+async function deleteStudentReview(reviewId) {
+  if (!adminPasscode) {
+    window.alert("Unlock Admin first.");
+    return;
+  }
+
+  const confirmed = window.confirm("Delete this student review permanently?");
+  if (!confirmed) return;
+
+  const { error } = await supabaseClient.rpc("admin_delete_review", {
+    target_review_id: reviewId,
+    entered_passcode: adminPasscode,
+  });
+
+  if (error) {
+    adminPasscode = "";
+    const btn = document.getElementById("admin-toggle-btn");
+    if (btn) btn.textContent = "Admin";
+    renderStudentReviews(cachedReviews);
+    window.alert("Incorrect passcode or unable to delete review.");
+    return;
+  }
+
+  await loadStudentReviews();
+}
+
+function renderStudentReviews(reviews = cachedReviews) {
+  cachedReviews = reviews;
+  const emptyState = document.getElementById("reviews-empty-state");
+  const list = document.getElementById("student-reviews-list");
+
+  if (!list) return;
+
+  if (!reviews.length) {
+    if (emptyState) emptyState.classList.remove("hidden");
+    list.innerHTML = "";
+    return;
+  }
+
+  if (emptyState) emptyState.classList.add("hidden");
+
+  list.innerHTML = reviews
+    .map((r) => {
+      const ratingNum = Number(r.rating) || 5;
+      const stars = Array.from({ length: 5 }, (_, i) =>
+        `<i class="fa-solid fa-star ${i < ratingNum ? "text-marigold-400" : "text-slate-200"}"></i>`
+      ).join("");
+
+      const initial = escapeReviewHtml((r.name || "S").trim().charAt(0).toUpperCase());
+
+      return `
+        <article class="bg-white border-2 border-peacock-100 rounded-3xl p-5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div class="text-xs flex gap-1">${stars}</div>
+              ${
+                adminPasscode
+                  ? `<button
+                      type="button"
+                      onclick="deleteStudentReview('${escapeReviewHtml(r.id)}')"
+                      class="text-xs font-bold text-coral-600 hover:text-coral-800 cursor-pointer"
+                    >
+                      Delete
+                    </button>`
+                  : ""
+              }
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">“${escapeReviewHtml(r.message)}”</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-peacock-700 text-white font-display font-bold text-sm flex items-center justify-center shrink-0">${initial}</div>
+            <div>
+              <div class="font-display font-bold text-sm text-peacock-900">${escapeReviewHtml(r.name)}</div>
+              <div class="text-xs font-semibold text-coral-600">${escapeReviewHtml(r.grade || "")}</div>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+           
 
         async function addStudentReview(e) {
             e.preventDefault();
@@ -1292,15 +1478,19 @@ whe<!DOCTYPE html>
             button.textContent = 'Posting review…';
             status.textContent = 'Saving your review…';
             try {
-                // Wait for an in-flight refresh so it cannot overwrite the new review.
-                while (loadingReviews) await new Promise(resolve => setTimeout(resolve, 50));
-                studentReviews = await requestReviews('/api/reviews', { name, grade, rating: selectedRating, message });
-                renderStudentReviews();
-                document.getElementById('reviews-load-status').classList.add('hidden');
-                form.reset();
-                setRating(5);
-                status.textContent = 'Thank you! Your review is posted and visible to everyone.';
-            } catch (error) {
+    const { error } = await supabaseClient
+        .from('student_reviews')
+        .insert([{ name, grade, rating: selectedRating, message }]);
+
+    if (error) throw error;
+
+    await loadStudentReviews();
+    document.getElementById('reviews-load-status')?.classList.add('hidden');
+    form.reset();
+    setRating(5);
+    status.textContent = 'Thank you! Your review is posted and visible to everyone.';
+}
+            catch (error) {
                 status.textContent = error.name === 'TimeoutError'
                     ? 'Saving took too long. Please try posting again; your review text is still here.'
                     : error.message === 'Failed to fetch'
