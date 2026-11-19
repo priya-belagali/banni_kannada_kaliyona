@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+whe<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -885,10 +885,13 @@
 
                 <!-- Right: Real Student Reviews Wall (Empty until students submit) -->
                 <div class="lg:col-span-7">
-                    <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-peacock-100 rounded-2xl px-4 py-2.5 mb-4 shadow-2xs">
-                        <span class="text-xs font-semibold text-slate-600">Student Reviews Wall</span>
-                        <button type="button" onclick="loadStudentReviews()" class="text-xs font-bold text-peacock-700 hover:text-coral-600 px-3 py-1.5 rounded-xl cursor-pointer">Refresh reviews</button>
-                    </div>
+                   <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-peacock-100 rounded-2xl px-4 py-2.5 mb-4 shadow-2xs">
+        <span class="text-xs font-semibold text-slate-600">Student Reviews Wall</span>
+        <div class="flex items-center gap-2">
+            <button type="button" id="admin-toggle-btn" onclick="toggleAdminMode()" class="text-xs font-bold text-slate-600 hover:text-peacock-700 px-3 py-1.5 rounded-xl border border-slate-200 cursor-pointer">Admin</button>
+            <button type="button" onclick="loadStudentReviews()" class="text-xs font-bold text-peacock-700 hover:text-coral-600 px-3 py-1.5 rounded-xl cursor-pointer">Refresh reviews</button>
+        </div>
+    </div>
                     <p id="reviews-load-status" role="status" aria-live="polite" class="mb-4 text-sm font-semibold text-peacock-900">Loading student reviews…</p>
 
                     <div id="reviews-empty-state" class="hidden bg-white/90 border-2 border-dashed border-peacock-200 rounded-3xl p-8 sm:p-12 text-center">
